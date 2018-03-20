@@ -1,0 +1,26 @@
+using UnityEngine;
+ using System.Collections;
+public class showgameobj : MonoBehaviour {
+	
+	    GameObject gb;      //初始化
+	    public string gbname;     //方便调用，循环利用
+	    void Start()
+	    {
+		        gb = GameObject.Find(gbname);
+
+		         gb.active = false;   //设置开始可见性（此处最新修改与2017年7月8日）
+		     }
+	     void OnClick() {   //控制显示和隐藏的方法
+	 
+
+		        if (gb.active == true)
+		         {
+		             gb.SetActive(false);
+		 
+		        }
+	        else if (gb.active == false)
+		        {
+		           gb.SetActive(true);
+		         }
+	    }
+ }
